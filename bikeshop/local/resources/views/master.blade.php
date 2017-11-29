@@ -12,20 +12,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--css-->
 <link href="{{URL::asset('sources/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all"/>
 <link href="{{asset('sources/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
-<link href="sources/css/font-awesome.css" rel="stylesheet">
+<link href="{{URL::asset('sources/css/font-awesome.css')}}" rel="stylesheet">
 <!--css-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="New Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="sources/js/jquery.min.js"></script>
+<script src="{{URL::asset('sources/js/jquery.min.js')}}"></script>
 <link href='//fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
 <!--search jQuery-->
-    <script src="sources/js/main.js"></script>
+    <script src="{{URL::asset('sources/js/main.js')}}"></script>
 <!--search jQuery-->
-<script src="sources/js/responsiveslides.min.js"></script>
+<script src="{{URL::asset('sources/js/responsiveslides.min.js')}}"></script>
  <script>
     $(function () {
       $("#slider").responsiveSlides({
@@ -38,13 +38,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
  </script>
  <!--mycart-->
-<script type="text/javascript" src="sources/js/bootstrap-3.1.1.min.js"></script>
+<script type="text/javascript" src="{{URL::asset('sources/js/bootstrap-3.1.1.min.js')}}"></script>
  <!-- cart -->
-<script src="sources/js/simpleCart.min.js"></script>
+<script src="{{URL::asset('sources/js/simpleCart.min.js')}}"></script>
 <!-- cart -->
   <!--start-rate-->
-<script src="sources/js/jstarbox.js"></script>
-    <link rel="stylesheet" href="sources/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+<script src="{{URL::asset('sources/js/jstarbox.js')}}"></script>
+    <link rel="stylesheet" href="{{URL::asset('sources/css/jstarbox.css')}}" type="text/css" media="screen" charset="utf-8" />
         <script type="text/javascript">
             jQuery(function() {
             jQuery('.starbox').each(function() {
@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="top-right">
                     <ul>
-                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="{{route('checkout')}}">Checkout</a></li>
                         <li><a href="sources/login.html">Login</a></li>
                         <li><a href="sources/registered.html"> Create Account </a></li>
                         <li><a href="sources/admin/index.html"> Admin</a></li>
@@ -199,7 +199,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                         <div class="header-right2">
                             <div class="cart box_1">
-                                <a href="checkout.html">
+                                <a href="{{route('checkout')}}">
                                     <h3> <div class="total">
                                         <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
                                         <img src="sources/images/bag.png" alt="" />
@@ -224,7 +224,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="footer-grids">
                                 <div class="col-md-3 footer-grid">
                                     <h4>About </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                    <p>ĐỒ ÁN NHÓM WEB1.</p>
+                                    <p>Trương Tiến Dũng-1560112.</p>
+                                    <p>Nguyễn Thành Đạt-1560129.</p>
                                     <div class="social-icon">
                                         <a href="#"><i class="icon"></i></a>
                                         <a href="#"><i class="icon1"></i></a>

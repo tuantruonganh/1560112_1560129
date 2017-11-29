@@ -57,7 +57,7 @@ $('#example1').coreSlider({
                 <div class="col-md-3 arrival-grid simpleCart_shelfItem">
                     <div class="grid-arr">   
                         <div  class="grid-arrival">
-                        <a href="{{route('single',$prds->id)}}">
+                        <a href="{{route('single',$prds->id,$prds->id_type_product)}}">
                             <div class="grid-img">
                                 <img  src="sources/images/products/{{$prds->image}}" class="img-responsive"  alt="" width="400px">
                             </div>  
@@ -80,7 +80,7 @@ $('#example1').coreSlider({
  <div class="accessories-w3l">
                 <div class="container">
                     <h3 class="tittle">20% Discount on</h3>
-                    <span style="color: red;">ĐUA KHÔNG?</span>
+                    <span style="color: red;">CBR S1000RR</span>
                     <div class="button">
                         <a href="#" class="button1"> Shop Now</a>
                         <a href="#" class="button1"> Quick View</a>
@@ -104,7 +104,7 @@ $('#example1').coreSlider({
                                     <div class="grid-arr">
                                         <div  class="grid-arrival">
                                             <figure>        
-                                                <a href="single">
+                                                <a href="{{route('single',$nprds->id)}}">
                                                     <div class="grid-img">
                                                         <img  src="sources/images/products/{{$nprds->image}}" class="img-responsive" alt="">
                                                     </div>         
@@ -146,7 +146,7 @@ $('#example1').coreSlider({
                     <div class="grid-arr">
                         <div  class="grid-arrival">
                             <figure>        
-                                <a href="single">
+                                <a href="{{route('single',$bprds->id)}}">
                                     <div class="grid-img">
                                         <img  src="sources/images/products/{{$bprds->image}}" class="img-responsive" alt="">
                                     </div>        

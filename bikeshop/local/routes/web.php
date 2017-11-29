@@ -20,7 +20,7 @@ Route::get('index',[
 	'uses'=>'PageController@getIndex'
 ]);
 Route::get('admin','PageController@getAdmin');
-Route::get('checkout.html','PageController@getCheckout');
+Route::get('checkout',['as'=>'checkout','uses'=>'PageController@getCheckout']);
 Route::get('sources/index.html','PageController@getIndex');
 Route::get('single/{id}',['as'=>'single','uses'=>'PageController@getDetail']);
 
