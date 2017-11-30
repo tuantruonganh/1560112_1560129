@@ -50,10 +50,7 @@ $('#example1').coreSlider({
         <div class="container">
             <h2 class="tittle">New Arrivals</h2>
             <div class="arrivals-grids">
-                <?php
-                    foreach($products as $prds)
-                    {
-                 ?>
+             @foreach($products as $prds)
                 <div class="col-md-3 arrival-grid simpleCart_shelfItem">
                     <div class="grid-arr">   
                         <div  class="grid-arrival">
@@ -65,14 +62,12 @@ $('#example1').coreSlider({
                         </div>
                         <div class="women">
                             <h6> <a href="{{route('single',$prds->id)}}">{{$prds->name}}</a></h6>
-                            <p >${{$prds->unit_price}}</p>
+                            <p >{{number_format($prds->unit_price)}}VNĐ</p>
                             <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
                         </div>
                     </div>
                 </div>
-                <?php
-                        }
-                    ?>
+                @endforeach
             </div>
         </div>
     </div>
@@ -96,10 +91,7 @@ $('#example1').coreSlider({
                     <ul class="rslides" id="slider">
                         <li>     
                             <div class="caption">
-                                <?php
-                                    foreach($new_products as $nprds)
-                                    {
-                                ?>
+                                @foreach($new_products as $nprds)
                                 <div class="col-md-3 cap-left simpleCart_shelfItem">
                                     <div class="grid-arr">
                                         <div  class="grid-arrival">
@@ -116,15 +108,12 @@ $('#example1').coreSlider({
                                         </div>
                                         <div class="women">
                                             <h6><a href="single">{{$nprds->name}}</a></h6>
-                                            <p >${{$prds->unit_price}}</p>
+                                            <p >{{number_format($nprds->unit_price)}}VNĐ</p>
                                             <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <?php
-                                    }
-                                ?>
+                                @endforeach
                             </div>
                         </li>
                     </ul>
@@ -158,7 +147,7 @@ $('#example1').coreSlider({
                         </div>
                         <div class="women">
                             <h6><a href="single">{{$bprds->name}}</a></h6>
-                            <p >${{$bprds->unit_price}}</p>
+                            <p >{{number_format($bprds->unit_price)}}VNĐ</p>
                             <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
                         </div>
                     </div>

@@ -85,7 +85,7 @@ $(window).load(function() {
 								<div class="block">
 									<div class="starbox small ghosting"> </div>
 								</div>
-								<p class="price item_price">$ {{$sanpham->unit_price}}</p>
+								<p class="price item_price">{{number_format($sanpham->unit_price)}}VNĐ</p>
 								<div class="description">
 									<p><span>Giới Thiệu: </span>{{$sanpham->description}} </p>
 								</div>
@@ -284,7 +284,7 @@ $(window).load(function() {
 								</div>
 								<div class="women">
 									<h6><a href="single.html"></a>{{$bprds->name}}</h6>
-									<p >${{$bprds->unit_price}}</p>
+									<p >{{number_format($bprds->unit_price)}}VNĐ</p>
 									<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 								</div>
 							</div>

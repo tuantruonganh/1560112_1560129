@@ -11,17 +11,26 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('index',[
+Route::get('/',[
 	'as'=>'trangchu',
 	'uses'=>'PageController@getIndex'
 ]);
 Route::get('admin','PageController@getAdmin');
-Route::get('checkout',['as'=>'checkout','uses'=>'PageController@getCheckout']);
+
+Route::get('checkout',[
+	'as'=>'checkout',
+	'uses'=>'PageController@getCheckout'
+]);
+
 Route::get('sources/index.html','PageController@getIndex');
-Route::get('single/{id}',['as'=>'single','uses'=>'PageController@getDetail']);
+
+Route::get('single/{id}',[
+	'as'=>'single',
+	'uses'=>'PageController@getDetail'
+]);
 
 
