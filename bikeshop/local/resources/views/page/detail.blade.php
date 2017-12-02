@@ -91,13 +91,7 @@ $(window).load(function() {
 								</div>
 								</br>
 								<div class="women">
-									<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
-								</div>
-								<div class="social-icon">
-									<a href="#"><i class="icon"></i></a>
-									<a href="#"><i class="icon1"></i></a>
-									<a href="#"><i class="icon2"></i></a>
-									<a href="#"><i class="icon3"></i></a>
+									<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Thêm vào giỏ hàng</a>
 								</div>
 							</div>
 							<div class="clearfix"> </div>
@@ -105,59 +99,21 @@ $(window).load(function() {
 						<!--Recent Products-->
 						<div class="col-md-3 single-grid1">
 							<h3>Recent Products</h3>
+							@foreach($related_products as $rprds)
 							<div class="recent-grids">
 								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="images/r.jpg" alt=""></a>	
+									<a href="{{route('single',$rprds->id)}}"><img class="img-responsive " src="../sources/images/products/{{$rprds->image}}" alt=""></a>	
 								</div>
 								<div class="recent-right">
-									<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
+									<h6 class="best2"><a href="single.html">{{$rprds->name}}</a></h6>
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									<span class=" price-in1"> $ 29.00</span>
+									<span class=" price-in1">{{number_format($rprds->unit_price)}}VNĐ</span>
 								</div>	
 								<div class="clearfix"> </div>
 							</div>
-							<div class="recent-grids">
-								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="images/r1.jpg" alt=""></a>	
-								</div>
-								<div class="recent-right">
-									<h6 class="best2"><a href="single.html">Duis aute irure </a></h6>
-									<div class="block">
-										<div class="starbox small ghosting"> </div>
-									</div>
-									<span class=" price-in1"> $ 19.00</span>
-								</div>	
-								<div class="clearfix"> </div>
-							</div>
-							<div class="recent-grids">
-								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="images/r2.jpg" alt=""></a>	
-								</div>
-								<div class="recent-right">
-									<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
-									<div class="block">
-										<div class="starbox small ghosting"> </div>
-									</div>
-									<span class=" price-in1"> $ 19.00</span>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="recent-grids">
-								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="images/r3.jpg" alt=""></a>	
-								</div>
-								<div class="recent-right">
-									<h6 class="best2"><a href="single.html">Ut enim ad minim </a></h6>
-									<div class="block">
-										<div class="starbox small ghosting"> </div>
-									</div> 
-									<span class=" price-in1">$ 45.00</span>
-								</div>	
-								<div class="clearfix"> </div>
-							</div>
-						</div>
+							@endforeach
 						<!--Recent Products-->
 					</div>
 
@@ -168,29 +124,9 @@ $(window).load(function() {
 			</div>
 				<!--Product Description-->
 					<div class="product-w3agile">
-						<h3 class="tittle1">Product Description</h3>
+						<h3 class="tittle1">Thông Số Kĩ Thuật</h3>
 						<div class="product-grids">
-							<div class="col-md-4 product-grid">
-								<div id="owl-demo" class="owl-carousel">
-									<div class="item">
-										<div class="recent-grids">
-											<div class="recent-left">
-												<a href="single.html"><img class="img-responsive " src="sources/images/products/" alt=""></a>	
-											</div>
-											<div class="recent-right">											
-												<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
-												<div class="block">
-													<div class="starbox small ghosting"> </div>
-												</div>
-												<span class=" price-in1"> $ 29.00</span>
-											</div>	
-											<div class="clearfix"> </div>
-										</div>
-									</div>
-								</div>
-								<img class="img-responsive " src="images/woo2.jpg" alt="">
-							</div>
-							<div class="col-md-8 product-grid1">
+							<div class="col-md-offset-3 col-md-8 product-grid1">
 								<div class="tab-wl3">
 									<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 										<ul id="myTab" class="nav nav-tabs left-tab" role="tablist">
@@ -201,8 +137,7 @@ $(window).load(function() {
 										<div id="myTabContent" class="tab-content">
 											<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 												<div class="descr">
-													<h4>Header 4</h4>
-													<p>Tạm thời chưa có :(</p>
+													<p>{{$sanpham->specification}}</p>
 												</div>
 											</div>
 											<div role="tabpanel" class="tab-pane fade" id="reviews" aria-labelledby="reviews-tab">

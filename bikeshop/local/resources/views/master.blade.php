@@ -20,6 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script src="{{URL::asset('sources/js/jquery.min.js')}}"></script>
+<script src="{{URL::asset('sources/js/imagezoom.js')}}"></script>
 <link href='//fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
 <!--search jQuery-->
@@ -95,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="container">
                     <div class="logo-nav">
                         <div class="logo-nav-left">
-                            <h1><a href="{{route('trangchu')}}">BIKE SHOP</a></h1>
+                            <h1><a href="{{route('homepage')}}">BIKE SHOP</a></h1>
                         </div>
                         <div class="logo-nav-left1">
                             <nav class="navbar navbar-default">
@@ -110,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div> 
                             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="index" class="act">Home</a></li>  
+                                    <li class="active"><a href="{{route('homepage')}}" class="act">Home</a></li>  
                                     <!-- Mega Menu -->
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hãng Sản Xuất<b class="caret"></b></a>
@@ -118,10 +119,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="row">
                                                 <div class="col-sm-3  multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="products.html">Yamaha</a></li>
-                                                        <li><a href="products.html">Honda</a></li>
-                                                        <li><a href="products.html">SYM</a></li>
-                                                        <li><a href="products.html">Suzuki</a></li>
+                                                    @foreach($ds_the_loai as $the_loai)
+                                                        <li><a href="products.html">{{$the_loai->name}}</a></li>
+                                                     @endforeach
                                                     </ul>
                                                 </div>
                                               <!--  <div class="col-sm-3  multi-gd-img">
@@ -135,13 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                         <li><a href="products.html">Jewellery</a></li>
                                                     </ul>
                                                 </div>-->
-                                                <div class="col-sm-3  multi-gd-img">
-                                                        <a href="products.html"><img src="sources/images/woo.jpg" alt=" "/></a>
-                                                </div> 
-                                                <div class="col-sm-3  multi-gd-img">
-                                                        <a href="products.html"><img src="sources/images/woo1.jpg" alt=" "/></a>
-                                                </div>
-                                                <div class="clearfix"></div>
+                                               
                                             </div>
                                         </ul>
                                     </li>
@@ -180,10 +174,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <div class="clearfix"></div>
                                             </div>
                                         </ul>
-                                    </li>
-                                    <li><a href="codes.html">Short Codes</a></li>
-                                    <li><a href="mail.html">Mail Us</a></li>
-                                </ul>-->
+                                    </li>-->
+                                    <li><a href="codes.html">Giới Thiệu</a></li>
+                                    <li><a href="mail.html">Liên Hệ</a></li>
+                                </ul>
+
                             </div>
                             </nav>
                         </div>

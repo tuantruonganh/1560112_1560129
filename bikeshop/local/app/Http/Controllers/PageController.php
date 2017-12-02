@@ -11,10 +11,10 @@ class PageController extends Controller
     public function getIndex()
     {
         $slide = Slide::all();
-        $products = Product::where('new_arrival',1)->get();
+        $products = Product::where('new_arrival',1)->paginate(4);
         $new_products = Product::where('new',1)->get();
         $bestsale_products = Product::where('best_seller',1)->get();
-    	return view('page.trangchu',compact('slide','products','new_products','bestsale_products'));
+    	return view('page.homepage',compact('slide','products','new_products','bestsale_products'));
     }
     public function getAdmin()
     {
@@ -28,6 +28,7 @@ class PageController extends Controller
     {
         $sanpham = Product::where('id',$id)->first();
         $bestsale_products = Product::where('best_seller',1)->get();
-        return view('page.detail',compact('sanpham','bestsale_products'));
+        $related_products = Product::where('id_type_product',$sanpham->id_type_product)->paginate(4);
+        return view('page.detail',compact('sanpham','bestsale_products','related_products'));
     }
  }

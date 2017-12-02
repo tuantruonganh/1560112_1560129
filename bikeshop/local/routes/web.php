@@ -16,7 +16,7 @@
 });*/
 
 Route::get('/',[
-	'as'=>'trangchu',
+	'as'=>'homepage',
 	'uses'=>'PageController@getIndex'
 ]);
 Route::get('admin','PageController@getAdmin');

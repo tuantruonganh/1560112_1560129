@@ -162,13 +162,13 @@ ul.multi-column-dropdown h6 {
 	font-weight:500 !important;
 }
 .dropdown-menu.columns-3 {
-    min-width: 700px;
+    min-width: 100px;
     padding: 30px 30px;
 }
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+/*.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: none;
     border: none;
-}
+}*/
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: transparent;
 }
@@ -621,7 +621,7 @@ h2.tittle {
     margin: 0 auto;
 }
 .women h6 {
-    font-size: 1.4em;
+    font-size: 18px;
     margin: 0.4em 0;
 }
 .women h6 a {
@@ -1784,12 +1784,13 @@ p.price {
 }
 .recent-left {
     float: left;
-    width: 24%;
+    width: 30%;
+    padding-bottom: 32px;
 }
 .recent-right {
     float: right;
-    width: 68%;
-	margin-top:1em;
+    width: 63%;
+    margin-top: 0px;
 }
 span.price-in1 {
     font-size: 1.2em;
