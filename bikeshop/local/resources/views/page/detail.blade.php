@@ -220,7 +220,7 @@ $(window).load(function() {
 								<div class="women">
 									<h6><a href="single.html"></a>{{$bprds->name}}</h6>
 									<p >{{number_format($bprds->unit_price)}}VNĐ</p>
-									<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Thêm vào giỏ hàng</a>
 								</div>
 							</div>
 						</div>

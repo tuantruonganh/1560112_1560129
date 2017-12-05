@@ -16,10 +16,7 @@ class PageController extends Controller
         $bestsale_products = Product::where('best_seller',1)->get();
     	return view('page.homepage',compact('slide','products','new_products','bestsale_products'));
     }
-    public function getAdmin()
-    {
-    	return view('admin');
-    }
+  
     public function getCheckout()
     {
     	return view('page.checkout');

@@ -19,7 +19,6 @@ Route::get('/',[
 	'as'=>'homepage',
 	'uses'=>'PageController@getIndex'
 ]);
-Route::get('admin','PageController@getAdmin');
 
 Route::get('checkout',[
 	'as'=>'checkout',
@@ -34,3 +33,29 @@ Route::get('single/{id}',[
 ]);
 
 
+
+route::get('index',[
+	'as'=>'index',
+	'uses'=>'PageController@getIndex'
+]);
+//--------------------------------------------ADMIN route--------------------------------------------
+route::get('admin/addproduct',[
+	'as'=>'addproduct',
+	'uses'=>'AdminController@Addproduct'
+]);
+
+route::get('admin',[
+	'as'=>'admin',
+	'uses'=>'AdminController@getAdmin'
+]);
+
+Route::post('them',[
+	'as'=>'them',
+	'uses'=>'AdminController@postAdd'
+]);
+
+route::get('admin/detailproduct',[
+	'as'=>'detailproduct',
+	'uses'=>'AdminController@getDetail'
+]);
+//--------------------------------------------ADMIN route--------------------------------------------

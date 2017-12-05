@@ -86,7 +86,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{route('checkout')}}">Checkout</a></li>
                         <li><a href="sources/login.html">Login</a></li>
                         <li><a href="sources/registered.html"> Create Account </a></li>
-                        <li><a href="sources/admin/index.html"> Admin</a></li>
                     </ul>
                     </div>
                     <div class="clearfix"></div>
@@ -120,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <div class="col-sm-3  multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                     @foreach($ds_the_loai as $the_loai)
-                                                        <li><a href="products.html">{{$the_loai->name}}</a></li>
+                                                        <li><a href="products.html">{{$the_loai->type_name}}</a></li>
                                                      @endforeach
                                                     </ul>
                                                 </div>
