@@ -26,6 +26,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--search jQuery-->
     <script src="{{URL::asset('sources/js/main.js')}}"></script>
 <!--search jQuery-->
+<link rel="stylesheet" type="text/css" href="{{URL::asset('sources/engine1/style.css')}}" />
+<script type="text/javascript" src="{{URL::asset('sources/engine1/jquery.js')}}"></script>
 <script src="{{URL::asset('sources/js/responsiveslides.min.js')}}"></script>
  <script>
     $(function () {
@@ -119,7 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <div class="col-sm-3  multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                     @foreach($ds_the_loai as $the_loai)
-                                                        <li><a href="products.html">{{$the_loai->type_name}}</a></li>
+                                                        <li><a href="{{route('products',$the_loai->id_type)}}">{{$the_loai->type_name}}</a></li>
                                                      @endforeach
                                                     </ul>
                                                 </div>

@@ -1,43 +1,21 @@
 @extends('master')
 @section('content')
 <!--banner-->
-<div class="banner-w3">
-<div class="demo-1">            
-    <div id="example1" class="core-slider core-slider__carousel example_1">
-        <div class="core-slider_viewport">
-            <?php
-                foreach($slide as $sl)
-                {
-            ?>
-            <div class="core-slider_list">
-            
-                <div class="core-slider_item">
-                    <img src="sources/images/slide/{{$sl->image}}" class="img-responsive" alt="">
-                </div>
-                
-             </div>
-            <?php
-                }
-            ?>
+<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+    @foreach($slide as $sl)
+		<li><img src="sources/images/slide/{{$sl->image}}" alt="" title="" id="wows1_0"/></li>
+    @endforeach
+	</ul></div>
+	<div class="ws_bullets">
+        <div>
+             @foreach($slide as $sl)
+            <a href="#" title=""><span><<img src="sources/images/slide/{{$sl->image}}" alt=""/>1</span></a>
+            @endforeach
         </div>
-        <div class="core-slider_nav">
-            <div class="core-slider_arrow core-slider_arrow__right"></div>
-            <div class="core-slider_arrow core-slider_arrow__left"></div>
-        </div>
-        <div class="core-slider_control-nav"></div>
-    </div>
-</div>
-<link href="sources/css/coreSlider.css" rel="stylesheet" type="text/css">
-<script src="sources/js/coreSlider.js"></script>
-<script>
-$('#example1').coreSlider({
-  pauseOnHover: false,
-  interval: 3000,
-  controlNavEnabled: true
-});
-
-</script>
-</div>  
+    </div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">bootstrap slider</a> by WOWSlider.com v8.8</div>
+	<div class="ws_shadow"></div>
+</div>	 
 <!--banner-->
 <!--content-->
 <div class="content">
@@ -161,7 +139,9 @@ $('#example1').coreSlider({
     </div>
 <!--new-arrivals-->
 </div>
+<script type="text/javascript" src="sources/engine1/wowslider.js"></script>
+<script type="text/javascript" src="sources/engine1/script.js"></script>
 <!--content-->
-@stop
+@endsection
 
       

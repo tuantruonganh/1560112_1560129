@@ -6,7 +6,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
 
-
+#row-detail{
+    padding-bottom: 60px;
+}
 
 body a{
     transition:0.5s all;

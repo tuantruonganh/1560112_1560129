@@ -137,7 +137,7 @@ $(window).load(function() {
 										<div id="myTabContent" class="tab-content">
 											<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 												<div class="descr">
-													<p>{{$sanpham->specification}}</p>
+													<pre>{{$sanpham->specification}}</pre>
 												</div>
 											</div>
 											<div role="tabpanel" class="tab-pane fade" id="reviews" aria-labelledby="reviews-tab">

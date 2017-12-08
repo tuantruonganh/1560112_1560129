@@ -6,7 +6,7 @@
             <div class="col-md-offset-2">
                 <form method="post" action="{!! route('them') !!}"  enctype="multipart/form-data" >
                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                        <table>
+                 <table>
                         </tr>
                             <th>Mã Sản Phẩm</th>
                             <th><input class="form-control" name="txtMa" placeholder="Mã Sản Phẩm" /></th>
@@ -17,7 +17,13 @@
                         </tr>
                         <tr>
                             <th>Loại sản phẩm</th>
-                            <th><input class="form-control" name="txtLoai" placeholder="Loại" /></th>
+                            <th>  
+                                <select name="type">
+                                @foreach($product_type as $product_type)
+                                    <option name="type" value="{{$product_type->id_type}}" >{{$product_type->type_name}}-{{$product_type->id_type}} </option>
+                                @endforeach
+                                </select>
+                            </th>
                         </tr>
                         <tr>
                             <th>Giá</th>
@@ -47,7 +53,7 @@
                             <th>New</th>
                             <th><input class="form-control" name="txtNew" placeholder="1:Yes, 0:No" /></th>
                         </tr>
-                        </table>
+                 </table>
                             
                         <button type="submit" class="btn btn-default" align-center>Thêm</button>
                         <button type="reset" class="btn btn-default">Làm Mới</button>

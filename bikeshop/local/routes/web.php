@@ -14,30 +14,31 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-
+//-----------------------------------Homepage route--------------------------------------
 Route::get('/',[
 	'as'=>'homepage',
 	'uses'=>'PageController@getIndex'
 ]);
 
-Route::get('checkout',[
-	'as'=>'checkout',
-	'uses'=>'PageController@getCheckout'
+route::get('index',[
+	'as'=>'index',
+	'uses'=>'PageController@getIndex'
 ]);
-
-Route::get('sources/index.html','PageController@getIndex');
+//-----------------------------------Homepage route--------------------------------------
 
 Route::get('single/{id}',[
 	'as'=>'single',
 	'uses'=>'PageController@getDetail'
 ]);
 
-
-
-route::get('index',[
-	'as'=>'index',
-	'uses'=>'PageController@getIndex'
+route::get('products/{id}',[
+	'as'=>'products',
+	'uses'=>'PageController@getProducts'
 ]);
+
+
+
+
 //--------------------------------------------ADMIN route--------------------------------------------
 route::get('admin/addproduct',[
 	'as'=>'addproduct',
@@ -51,11 +52,35 @@ route::get('admin',[
 
 Route::post('them',[
 	'as'=>'them',
-	'uses'=>'AdminController@postAdd'
+	'uses'=>'AdminController@createProduct'
 ]);
 
 route::get('admin/detailproduct',[
 	'as'=>'detailproduct',
 	'uses'=>'AdminController@getDetail'
 ]);
+
+/*route::resource('admin/editproduct/{id}',[
+	'as'=>'admin/editproduct',
+	'uses'=>'ProductController@getAdmin'
+]);*/
+
+
+route::get('admin/editproduct/{id}',[
+	'as'=>'admin/editproduct',
+	'uses'=>'AdminController@getDetailProduct'
+]);
+route::post('admin/edit/{id}',[
+	'as'=>'edit',
+	'uses'=>'AdminController@editProduct'
+]);
 //--------------------------------------------ADMIN route--------------------------------------------
+
+
+Route::get('checkout',[
+	'as'=>'checkout',
+	'uses'=>'PageController@getCheckout'
+]);
+
+Route::get('sources/index.html','PageController@getIndex');
+

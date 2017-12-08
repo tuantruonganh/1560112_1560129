@@ -19,6 +19,7 @@
                     <th>{{$pr->type_name}}</th>
                     <th>{{number_format($pr->unit_price)}} VNĐ</th>      
                     <th><img src="../sources/images/products/{{$pr->image}}" style="width:30%;"></img></th>
+                    <th><a href="{{route('admin/editproduct',$pr->id)}}">Edit</a></th>
                 </tr>
                 @endforeach
              </table>

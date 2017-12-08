@@ -14,7 +14,7 @@ class PageController extends Controller
         $products = Product::where('new_arrival',1)->paginate(4);
         $new_products = Product::where('new',1)->get();
         $bestsale_products = Product::where('best_seller',1)->get();
-    	return view('page.homepage',compact('slide','products','new_products','bestsale_products'));
+    	return view('page.homepage',compact('slide','products','new_products','bestsale_products')); 
     }
   
     public function getCheckout()
@@ -27,5 +27,10 @@ class PageController extends Controller
         $bestsale_products = Product::where('best_seller',1)->get();
         $related_products = Product::where('id_type_product',$sanpham->id_type_product)->paginate(4);
         return view('page.detail',compact('sanpham','bestsale_products','related_products'));
+    }
+    public function getProducts($id)
+    {
+        $products = Product::where('id_type_product',$id)->get();
+        return view('page.products',compact('products'));
     }
  }

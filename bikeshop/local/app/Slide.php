@@ -8,3 +8,5 @@ class Slide extends Model
 {
     protected $table = "slide";
 }
+
+
