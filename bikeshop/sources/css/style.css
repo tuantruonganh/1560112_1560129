@@ -1033,7 +1033,7 @@ h3.tittle1 {
 .social-icon a i {
     width: 32px;
     height: 32px;
-    background:#F19E1F url(../images/img-sprite.png) no-repeat 0px 0px;
+    background:#F19E1F url(../images/icon/img-sprite.png) no-repeat 0px 0px;
     display: inline-block;
 	margin:0 0.2em;
 	transition: 0.5s all;
@@ -1055,7 +1055,7 @@ h3.tittle1 {
     background-position: -32px 0px;
 }
 .social-icon i.icon1:hover {
-  background: #AF1D0D   url(../images/img-sprite.png) no-repeat -32px 0px;
+  background: #AF1D0D   url(../images/icon/img-sprite.png) no-repeat -32px 0px;
       border-radius: 0px;
 	      transform: rotate(25deg);
 }
@@ -1063,7 +1063,7 @@ h3.tittle1 {
     background-position: -64px 0px;
 }
 .social-icon i.icon2:hover {
-  background: #AF1D0D   url(../images/img-sprite.png) no-repeat -64px 0px;
+  background: #AF1D0D   url(../images/icon/img-sprite.png) no-repeat -64px 0px;
       border-radius: 0px;
 	      transform: rotate(25deg);
 }
@@ -1071,7 +1071,7 @@ h3.tittle1 {
     background-position: -96px 0px;
 }
 .social-icon i.icon3:hover {
-  background: #AF1D0D   url(../images/img-sprite.png) no-repeat -96px 0px;
+  background: #AF1D0D   url(../images/icon/img-sprite.png) no-repeat -96px 0px;
       border-radius: 0px;
 	      transform: rotate(25deg);
 }

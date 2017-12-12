@@ -31,6 +31,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{URL::asset('sources/admin/js/jquery2.0.3.min.js')}}"></script>
 <script src="{{URL::asset('sources/admin/js/raphael-min.js')}}"></script>
 <script src="{{URL::asset('sources/admin/js/morris.js')}}"></script>
+<script>
+    function radiobuttons(checked)
+    {
+    switch(checked)
+    {
+    case '1': document.getElementById('txtNewArrivals').checked=true;
+    document.getElementById('txtNew').checked=false;
+    document.getElementById('txtBestSeller').checked=false;
+    document.getElementById('none').checked=false;
+    break;
+    case '2': document.getElementById('txtNew').checked=true;
+    document.getElementById('txtNewArrivals').checked=false;
+    document.getElementById('txtBestSeller').checked=false;
+    document.getElementById('none').checked=false;
+    break;
+    case '3': document.getElementById('txtBestSeller').checked=true;
+    document.getElementById('txtNew').checked=false;
+    document.getElementById('txtNewArrivals').checked=false;
+    document.getElementById('none').checked=false;
+    break;
+    case '4': document.getElementById('none').checked=true;
+    document.getElementById('txtNew').checked=false;
+    document.getElementById('txtNewArrivals').checked=false;
+    document.getElementById('txtBestSeller').checked=false;
+    break;
+    default: alert(checked); 
+    break;
+    }
+    }
+</script>
 </head>
 <body>
 <section id="container">
@@ -39,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--logo start-->
 <div class="brand">
     <a href="{{route('admin')}}" class="logo">
-        Admin
+        BikeShop Admin
     </a>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -59,14 +89,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="{{URL::asset('sources/admin/images/2.jpg')}}">
-                <span class="username">1560112</span>
+                @if(Auth::check())           
+                   <span class="username">{{Auth::user()->full_name}}</span>
+                @endif
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                <li><a href="{{route('adminlogout')}}"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -90,7 +121,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
 						<li><a href="{!! route('addproduct') !!}">Đăng sản phẩm</a></li>
 						<li><a href="{{route('detailproduct')}}">Danh sách sản phẩm</a></li>
-                        <li><a href="grids.html">Grids</a></li>
                     </ul>
                 </li>
                 <!--<li class="sub-menu">
@@ -156,12 +186,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </li>
                 <li>-->
-                    <a href="login.html">
-                        <i class="fa fa-user"></i>
-                        <span>Login Page</span>
-                    </a>
-                </li>
-            </ul>            </div>
+            </ul>            
+        </div>
         <!-- sidebar menu end-->
     </div>
 </aside>
